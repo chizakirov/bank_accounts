@@ -55,7 +55,7 @@ namespace bankaccounts.Controllers
            }
        }
 
-       [HttpGet("success")]
+       [HttpGet("success/{UserId}")]
        public IActionResult GetAccount(){
            int? id = HttpContext.Session.GetInt32("UserId");
            User user = dbContext.users.FirstOrDefault(u => u.UserId == id);
