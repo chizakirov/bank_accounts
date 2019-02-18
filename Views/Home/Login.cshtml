@@ -1,0 +1,20 @@
+﻿@model User
+
+<div class = "login">
+    <h2>Login</h2>
+    <a href = "/">Need to Register?</a>
+    <hr>
+    <form asp-action="ProcessLogin" asp-controller="Home" method = "post">
+        <span class="text-danger" asp-validation-for="Email"></span>
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email">
+        <br>
+        <br>
+        <span class="text-danger" asp-validation-for="Password"></span>
+        <label asp-for="Password">Password</label>
+        <input asp-for="Password">
+        <br>
+        <br>
+        <input value = "Login" type = "submit">
+    </form>
+</div>
